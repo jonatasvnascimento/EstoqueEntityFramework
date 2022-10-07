@@ -34,23 +34,25 @@ namespace EstoqueEntityFramework
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdicionarCategoria = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnAlterarCategoria = new System.Windows.Forms.Button();
             this.btnExcluirCategoria = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnExcluirProduto = new System.Windows.Forms.Button();
+            this.btnEditarProduto = new System.Windows.Forms.Button();
+            this.btnAdicionarProduto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(12, 27);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(228, 23);
+            this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 0;
             // 
             // label1
@@ -73,24 +75,6 @@ namespace EstoqueEntityFramework
             this.btnAdicionarCategoria.TabIndex = 2;
             this.btnAdicionarCategoria.UseVisualStyleBackColor = true;
             // 
-            // btnAlterarCategoria
-            // 
-            this.btnAlterarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterarCategoria.Location = new System.Drawing.Point(277, 27);
-            this.btnAlterarCategoria.Name = "btnAlterarCategoria";
-            this.btnAlterarCategoria.Size = new System.Drawing.Size(25, 25);
-            this.btnAlterarCategoria.TabIndex = 3;
-            this.btnAlterarCategoria.UseVisualStyleBackColor = true;
-            // 
-            // btnExcluirCategoria
-            // 
-            this.btnExcluirCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirCategoria.Location = new System.Drawing.Point(308, 27);
-            this.btnExcluirCategoria.Name = "btnExcluirCategoria";
-            this.btnExcluirCategoria.Size = new System.Drawing.Size(25, 25);
-            this.btnExcluirCategoria.TabIndex = 4;
-            this.btnExcluirCategoria.UseVisualStyleBackColor = true;
-            // 
             // imageList1
             // 
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
@@ -100,6 +84,28 @@ namespace EstoqueEntityFramework
             this.imageList1.Images.SetKeyName(1, "edit.png");
             this.imageList1.Images.SetKeyName(2, "plus.png");
             this.imageList1.Images.SetKeyName(3, "trash.png");
+            // 
+            // btnAlterarCategoria
+            // 
+            this.btnAlterarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterarCategoria.ImageIndex = 1;
+            this.btnAlterarCategoria.ImageList = this.imageList1;
+            this.btnAlterarCategoria.Location = new System.Drawing.Point(277, 27);
+            this.btnAlterarCategoria.Name = "btnAlterarCategoria";
+            this.btnAlterarCategoria.Size = new System.Drawing.Size(25, 25);
+            this.btnAlterarCategoria.TabIndex = 3;
+            this.btnAlterarCategoria.UseVisualStyleBackColor = true;
+            // 
+            // btnExcluirCategoria
+            // 
+            this.btnExcluirCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluirCategoria.ImageIndex = 3;
+            this.btnExcluirCategoria.ImageList = this.imageList1;
+            this.btnExcluirCategoria.Location = new System.Drawing.Point(308, 27);
+            this.btnExcluirCategoria.Name = "btnExcluirCategoria";
+            this.btnExcluirCategoria.Size = new System.Drawing.Size(25, 25);
+            this.btnExcluirCategoria.TabIndex = 4;
+            this.btnExcluirCategoria.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -119,41 +125,48 @@ namespace EstoqueEntityFramework
             this.label2.TabIndex = 6;
             this.label2.Text = "label2";
             // 
-            // button1
+            // btnExcluirProduto
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(745, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 25);
-            this.button1.TabIndex = 9;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnExcluirProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluirProduto.ImageIndex = 3;
+            this.btnExcluirProduto.ImageList = this.imageList1;
+            this.btnExcluirProduto.Location = new System.Drawing.Point(745, 64);
+            this.btnExcluirProduto.Name = "btnExcluirProduto";
+            this.btnExcluirProduto.Size = new System.Drawing.Size(25, 25);
+            this.btnExcluirProduto.TabIndex = 9;
+            this.btnExcluirProduto.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnEditarProduto
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(714, 67);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 25);
-            this.button2.TabIndex = 8;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEditarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarProduto.ImageIndex = 1;
+            this.btnEditarProduto.ImageList = this.imageList1;
+            this.btnEditarProduto.Location = new System.Drawing.Point(714, 64);
+            this.btnEditarProduto.Name = "btnEditarProduto";
+            this.btnEditarProduto.Size = new System.Drawing.Size(25, 25);
+            this.btnEditarProduto.TabIndex = 8;
+            this.btnEditarProduto.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnAdicionarProduto
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(683, 67);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(25, 25);
-            this.button3.TabIndex = 7;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAdicionarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdicionarProduto.ImageIndex = 0;
+            this.btnAdicionarProduto.ImageList = this.imageList1;
+            this.btnAdicionarProduto.Location = new System.Drawing.Point(683, 64);
+            this.btnAdicionarProduto.Name = "btnAdicionarProduto";
+            this.btnAdicionarProduto.Size = new System.Drawing.Size(25, 25);
+            this.btnAdicionarProduto.TabIndex = 7;
+            this.btnAdicionarProduto.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(781, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnExcluirProduto);
+            this.Controls.Add(this.btnEditarProduto);
+            this.Controls.Add(this.btnAdicionarProduto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnExcluirCategoria);
@@ -161,6 +174,7 @@ namespace EstoqueEntityFramework
             this.Controls.Add(this.btnAdicionarCategoria);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormMain";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -179,9 +193,9 @@ namespace EstoqueEntityFramework
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnExcluirProduto;
+        private System.Windows.Forms.Button btnEditarProduto;
+        private System.Windows.Forms.Button btnAdicionarProduto;
     }
 }
 
