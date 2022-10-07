@@ -176,7 +176,7 @@ namespace EstoqueEntityFramework
             this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormMain";
-            this.Text = "Form1";
+            this.Text = "Estoque EF5";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
