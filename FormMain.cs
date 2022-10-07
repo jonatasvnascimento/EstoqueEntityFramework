@@ -28,6 +28,8 @@ namespace EstoqueEntityFramework
             using (var form = new FormCategoria())
             {
                 form.Text = "Adicionando Categoria";
+                form.btnSalvar.DialogResult = DialogResult.OK;
+
                 if (form.ShowDialog() == DialogResult.OK)
                 {
                     using (var db = new EstoqueContext())

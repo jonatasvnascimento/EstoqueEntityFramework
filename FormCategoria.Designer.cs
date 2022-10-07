@@ -71,6 +71,7 @@ namespace EstoqueEntityFramework
             this.btnSalvar.TabIndex = 3;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // FormCategoria
             // 
@@ -93,8 +94,8 @@ namespace EstoqueEntityFramework
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnSalvar;
         public System.Windows.Forms.TextBox txtNome;
+        public System.Windows.Forms.Button btnCancelar;
+        public System.Windows.Forms.Button btnSalvar;
     }
 }
