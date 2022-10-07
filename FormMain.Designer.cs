@@ -31,7 +31,7 @@ namespace EstoqueEntityFramework
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxCategorias = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdicionarCategoria = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -45,15 +45,15 @@ namespace EstoqueEntityFramework
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cbxCategorias
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(228, 23);
-            this.comboBox1.Sorted = true;
-            this.comboBox1.TabIndex = 0;
+            this.cbxCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCategorias.FormattingEnabled = true;
+            this.cbxCategorias.Location = new System.Drawing.Point(12, 27);
+            this.cbxCategorias.Name = "cbxCategorias";
+            this.cbxCategorias.Size = new System.Drawing.Size(228, 23);
+            this.cbxCategorias.Sorted = true;
+            this.cbxCategorias.TabIndex = 0;
             // 
             // label1
             // 
@@ -74,6 +74,7 @@ namespace EstoqueEntityFramework
             this.btnAdicionarCategoria.Size = new System.Drawing.Size(25, 25);
             this.btnAdicionarCategoria.TabIndex = 2;
             this.btnAdicionarCategoria.UseVisualStyleBackColor = true;
+            this.btnAdicionarCategoria.Click += new System.EventHandler(this.btnAdicionarCategoria_Click);
             // 
             // imageList1
             // 
@@ -173,7 +174,7 @@ namespace EstoqueEntityFramework
             this.Controls.Add(this.btnAlterarCategoria);
             this.Controls.Add(this.btnAdicionarCategoria);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxCategorias);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormMain";
             this.Text = "Estoque EF5";
@@ -185,7 +186,7 @@ namespace EstoqueEntityFramework
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxCategorias;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAdicionarCategoria;
         private System.Windows.Forms.Button btnAlterarCategoria;

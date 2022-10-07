@@ -29,19 +29,19 @@ namespace EstoqueEntityFramework
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(13, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(249, 23);
-            this.textBox1.TabIndex = 0;
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNome.Location = new System.Drawing.Point(13, 31);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(249, 23);
+            this.txtNome.TabIndex = 0;
             // 
             // label1
             // 
@@ -81,7 +81,7 @@ namespace EstoqueEntityFramework
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "FormCategoria";
@@ -92,10 +92,9 @@ namespace EstoqueEntityFramework
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
+        public System.Windows.Forms.TextBox txtNome;
     }
 }
